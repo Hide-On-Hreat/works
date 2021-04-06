@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1.求数组中所有元素的和。
+        var arr=[132,4,5,0,7,8,89,0,90,45];
+        var sum=0;
+        for (let index = 0; index < arr.length; index++) {
+            sum+=arr[index];
+        }
+        console.log(sum);
+    </script>
+    <script>
+        //2.求数组中所有元素的平均值。
+        var arr=[132,4,5,0,7,8,89,0,90,45];
+        var sum=0;
+        var aver=0;
+        for (let index = 0; index < arr.length; index++) {
+            sum+=arr[index];
+        }
+        aver=sum/arr.length;
+        console.log(aver);
+    </script>
+    <script>
+        //3.求数组中元素中的最大值。
+        var arr=[132,4,5,0,7,8,89,0,90,45];
+        var max=arr[0];
+        for (var i = 1; i < arr.length; i++) {
+            if(arr[i]>max){
+                max=arr[i];
+            }   
+        }
+        console.log(max);
+    </script>
+    <script>
+        //4.求数组中元素中的最小值。
+        var arr=[132,4,5,0,7,8,89,0,90,45];
+        var min=arr[0];
+        for (var i = 1; i < arr.length; i++) {
+            if(arr[i]<min){
+                min=arr[i];
+            }   
+        }
+        console.log(min);
+    </script>
+    <script>
+        //5.倒序遍历数组。
+        var arr=[132,4,5,0,7,8,89,0,90,45];
+        var newArr=[];
+        for (var j =arr.length-1; j >=0 ; j--) {
+            newArr[newArr.length] = arr[j];
+        }
+        console.log(newArr);
+    </script>
+    <script>
+        //6.把数组中每个元素用“-”拼接产生一个字符串。结果：132-4-5……
+        var arr=[132,4,5,0,7,8,89,0,90,45];
+        var str=arr[0];
+        var sign='-';
+        for (let i = 1; i < arr.length; i++) {
+            str +=sign+ arr[i]; 
+        }
+        console.log(str);
+    </script>
+    <script>
+        //7.去掉数组中所有的0，把其他的元素放入一个新的数组。
+        var arr=[132,4,5,0,7,8,89,0,90,45];
+        var newArr=[];
+        for (let i = 0; i < arr.length; i++) {
+            if(arr[i]!=0){
+                newArr[newArr.length] = arr[i];
+            } 
+        }
+        console.log(newArr);
+    </script>
+    <script>
+        //8.反转数组：把数组中的元素位置调换。
+        var arr=[132,4,5,0,7,8,89,0,90,45];
+        var newArr=[];
+        for (var j =arr.length-1; j >=0 ; j--) {
+            newArr[newArr.length] = arr[j];
+        }
+        console.log(newArr);
+    </script>
+    <script>
+        //9.冒泡排序。从小到大。
+        var arr=[132,4,5,0,7,8,89,0,90,45];
+        for (var i = 1; i < arr.length; i++) {
+            for (var j = 0; j < arr.length-i; j++) {
+                if(arr[j]>arr[j+1]){
+                    var temp=arr[j+1];
+                    arr[j+1]=arr[j];
+                    arr[j]=temp;
+                } 
+            }
+        }
+        console.log(arr);
+    </script>
+    <script>
+        //9.冒泡排序。从大到小。
+        var arr=[132,4,5,0,7,8,89,0,90,45];
+        for (var i = 1; i < arr.length; i++) {
+            for (var j = 0; j < arr.length-i; j++) {
+                if(arr[j]<arr[j+1]){
+                    var temp=arr[j+1];
+                    arr[j+1]=arr[j];
+                    arr[j]=temp;
+                } 
+            }
+        }
+        console.log(arr);
+    </script>
+    <script>
+        // 1.打印方形星星
+         for (var i = 0; i < 5; i++) {
+            for (var j = 0; j < 5; j++) {
+                document.write('☆');
+             }
+             document.write('<br>');
+         }
+        // 2.打印三角形星星
+         for (var i = 0; i < 5; i++) {
+             for (var j = 0; j < i + 1; j++) {
+                 document.write('☆');
+             }
+             document.write('<br>');
+         }
+        // 3.九九乘法表
+        document.write("<table border='1' cellspacing='0'>")
+        for (var i = 1; i < 10; i++) {
+            document.write('<tr>');
+            for (var j = 1; j < i + 1; j++) {
+                document.write('<td>');
+                document.write(j + '×' + i + '=' + i * j + '&nbsp;' + '&nbsp;');
+                document.write('</td>');
+            }
+            document.write('</tr>');
+        }
+        document.write('</table>');
+    </script>
+    <script>
+        // 1.计算1-100的和。
+        var i = 1;
+        var sum = 0;
+        while (i <= 100) {
+            sum += i;
+            i++;
+        }
+        console.log(sum);
+    </script>
+    <script>
+        // 2.1-100的偶数和。
+        var i = sum = 0;
+        while (i <= 100) {
+            if (i % 2 == 0) {
+                sum += i;
+            }
+            i++;
+        }
+        console.log(sum);
+    </script>
+    <script>
+        // 3.8的阶乘。
+        var i = fact = 1;
+        while (i <= 8) {
+            fact *= i;
+            i++;
+        }
+        console.log(fact);
+    </script>
+    <script>
+        // 4.1-100能被7整除的数字。
+        var i = 1;
+        while (i <= 100) {
+            if (i % 7 == 0) {
+                console.log(i);
+            }
+            i++;
+        }
+    </script>
+    <script>
+        // 5.1-100第一个能被7整除的数字。
+        var i = 1;
+        while (i <= 100) {
+            if (i % 7 == 0) {
+                console.log(i);
+                break;
+            }
+            i++;
+        }
+    </script>
+</body>
+</html>
